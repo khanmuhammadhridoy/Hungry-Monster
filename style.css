@@ -24,7 +24,37 @@ body {
     text-align: center;
 }
 
+#ingredients {
+    width: 50%;
+    margin: auto;
+}
+
 .food-name {
     padding: 20px;
     font-size: 20px;
+}
+
+.ingredient-name {
+    padding: 25px 0px;
+    font-weight: 700;
+}
+
+.IngredientID-title {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-left: -30px;
+    list-style: none;
+    font-size: 18px;
+}
+
+img.ingredient-img {
+    border-radius: 20px;
+    width: 100%;
+}
+
+.ingredient {
+    margin-bottom: 50px;
 }
