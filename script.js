@@ -5,11 +5,10 @@ function getFood(foodName) {
         .then(data => {
             const mealArray = data.meals;
             mealArray.forEach(food => {
-                // console.log(food)
-                displayFood(food)
+                displayFood(food);
             });
         })
-        .catch(error => alert('Please Give A Valid Food Name'))
+        .catch(error => alert('This meal is not available. Please try another one.'))
 }
 // creating food box
 const displayFood = mealBox => {
@@ -28,7 +27,7 @@ document.getElementById('search').addEventListener('click', function () {
     const meal = document.getElementById('meal').value;
     // checking that search value is not empty
     if (meal == "") {
-        alert('Please Provide a Food Name')
+        alert('Please Provide a Food Name');
     } else {
         getFood(meal);
     }
