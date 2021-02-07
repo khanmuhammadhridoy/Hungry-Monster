@@ -33,6 +33,7 @@ document.getElementById('search').addEventListener('click', function () {
     }
     document.getElementById('meal').value = "";
     document.getElementById('foodArea').innerText = "";
+    document.getElementById('ingredients').innerText = "";
 })
 
 // api function to show Ingredient
