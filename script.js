@@ -54,7 +54,7 @@ const ingredient = IngredientID => {
             <img class="ingredient-img" src="${IngredientID.strMealThumb}" alt="">
             <h3 class="ingredient-name">${IngredientID.strMeal}</h3>
             <h5 class="IngredientID-title">Ingredient</h5>
-            <ul>
+            <ul id="ingredientList">
                 <li>${IngredientID.strMeasure1} ${IngredientID.strIngredient2}</li>
                 <li>${IngredientID.strMeasure2} ${IngredientID.strIngredient3}</li>
                 <li>${IngredientID.strMeasure3} ${IngredientID.strIngredient1}</li>
@@ -70,6 +70,63 @@ const ingredient = IngredientID => {
                 <li>${IngredientID.strMeasure13} ${IngredientID.strIngredient13}</li>
                 <li>${IngredientID.strMeasure14} ${IngredientID.strIngredient14}</li>
                 <li>${IngredientID.strMeasure15} ${IngredientID.strIngredient15}</li>
+                <li>${IngredientID.strMeasure16} ${IngredientID.strIngredient16}</li>
+                <li>${IngredientID.strMeasure17} ${IngredientID.strIngredient17}</li>
+                <li>${IngredientID.strMeasure18} ${IngredientID.strIngredient18}</li>
+                <li>${IngredientID.strMeasure19} ${IngredientID.strIngredient19}</li>
+                <li>${IngredientID.strMeasure20} ${IngredientID.strIngredient20}</li>
             </ul>
         </div>`
+
+
+
+
+    /*
+    const ul = document.getElementById("ingredientList").innerText
+    const list = document.getElementsByTagName("li");
+    const li = [...list]
+    li.forEach(element => {
+        single = element.innerText;
+        if (single == "" || single == "null null") {
+            // return single;
+            ul.innerText = single
+        }
+
+        // console.log(ul)
+        // console.log(ul)
+
+    });
+*/
+    // for (let i = 0; i < li.length; i++) {
+    //     let element = li[i];
+    //     single = element.innerText;
+    //     if (single == "" || single == "null null") {
+    //         continue;
+    //     }
+    //     console.log(single)
+    // }
+    // const ul = document.getElementById("ingredientList").innerText
+    // li.forEach(element => {
+    //     element = element.innerText;
+    //     console.log(element)
+    // });
+    // li.forEach(element => {
+    //     console.log(element)
+    // });
+    // const li = list.innerText;
+    // console.log(li)
+    // for (let i = 0; i < list.length; i++) {
+    //     const element = list[i];
+    //     console.log(element);
+
+    // }
+    // let li = list.map(li)s
+    // const listArray = forEach
+    // list.forEach(element => {
+    //     console.log(element)
+    // });
+
+    // console.log(list.innerText)
+    // if (list.innerText == " " || list.innerText == "null null") {}
+
 }
