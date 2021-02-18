@@ -58,3 +58,11 @@ img.ingredient-img {
 .ingredient {
     margin-bottom: 50px;
 }
+
+.instructions {
+    text-align: justify;
+}
+
+.link {
+    text-decoration: none;
+}
