@@ -8,7 +8,13 @@ function getFood(foodName) {
                 displayFood(food);
             });
         })
-        .catch(error => alert('This meal is not available. Please try another one.'))
+        .catch(error => {
+            document.getElementById('error').innerHTML = `<h1><span class = "red">${foodName}</span> is not available.Please
+            search another one.</h1>`;
+            toggleSpinner();
+
+        })
+
     // .catch(error => error)
 }
 // creating food box
@@ -21,7 +27,15 @@ const displayFood = mealBox => {
                 <h3 onclick="displayIngredient('${mealBox.idMeal}')" class="food-name">${mealBox.strMeal}</h3>`
     foodDiv.innerHTML = foodInfo;
     foodArea.appendChild(foodDiv);
+    toggleSpinner();
 }
+// Enter Key function Added for search
+document.getElementById("meal").addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+        event.preventDefault()
+        document.getElementById('search').click();
+    }
+});
 // search button handler
 document.getElementById('search').addEventListener('click', function () {
     // getting foodName
@@ -36,6 +50,8 @@ document.getElementById('search').addEventListener('click', function () {
     document.getElementById('meal').value = "";
     document.getElementById('foodArea').innerText = "";
     document.getElementById('ingredients').innerText = "";
+    document.getElementById('error').innerText = "";
+    toggleSpinner();
 })
 
 // api function to show Ingredient
@@ -45,7 +61,7 @@ const displayIngredient = name => {
         .then(data => {
             const Array = data.meals;
             ingredient(Array[0]);
-            console.log(Array);
+            // console.log(Array);
             // Array.forEach(id => {
             //     ingredient(id)
             // });
@@ -77,4 +93,9 @@ const ingredient = IngredientId => {
             // console.log();
         }
     }
+}
+// loadingSpinner function
+const toggleSpinner = () => {
+    const spinner = document.getElementById("loadingSpinner")
+    spinner.classList.toggle("invisible");
 }
